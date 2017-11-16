@@ -1,0 +1,342 @@
+.root {
+    -fx-base: rgb(20, 20, 20);
+    -fx-background: rgb(50, 50, 50);
+
+    /* make controls (buttons, thumb, etc.) slightly lighter */
+    -fx-color: derive(-fx-base, 10%);
+
+    /* text fields and table rows background */
+    -fx-control-inner-background: rgb(50, 50, 50);
+    /* version of -fx-control-inner-background for alternative rows */
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, 2.5%);
+
+    /* text colors depending on background's brightness */
+    -fx-light-text-color: rgb(220, 220, 220);
+    -fx-mid-text-color: rgb(100, 100, 100);
+    -fx-dark-text-color: rgb(20, 20, 20);
+
+    /*highlighting/accenting objects.  */
+    -fx-accent: rgb(128, 128, 128);
+
+    /* color of non-focused yet selected elements */
+    -fx-selection-bar-non-focused: rgb(100, 100, 100);
+
+    /*Focus colour*/
+    -fx-focus-color: rgb(100, 100, 100);
+}
+
+/* Fix derived prompt color for text fields */
+.text-input {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, +0%);
+    -fx-background-color: #a9a9a9 , grey, grey;
+
+}
+
+/* Keep prompt invisible when focused (above color fix overrides it) */
+.text-input:focused {
+    -fx-prompt-text-fill: transparent;
+}
+
+/* Fix scroll bar buttons arrows colors */
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(255, 255, 255);
+}
+
+.scroll-bar > .increment-button:hover > .increment-arrow,
+.scroll-bar > .decrement-button:hover > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(255, 255, 255);
+}
+
+.scroll-bar > .increment-button:pressed > .increment-arrow,
+.scroll-bar > .decrement-button:pressed > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(255, 255, 255);
+}
+
+
+#arrowImage {
+    -fx-image: url("/visualiser/images/arrowLight.png");
+}
+
+#nextButton {
+    -fx-background-image: url("/visualiser/images/ArrowRoundRight.png");
+    -fx-background-size: 60px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+#nextButton:pressed {
+    -fx-background-image: url("/visualiser/images/ArrowRoundRightClicked.png");
+    -fx-background-size: 60px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#previousButton {
+    -fx-background-image: url("/visualiser/images/ArrowRoundLeft.png");
+    -fx-background-size: 60px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+#previousButton:pressed {
+    -fx-background-image: url("/visualiser/images/ArrowRoundLeftClicked.png");
+    -fx-background-size: 60px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#lineChartWrapper{
+    -fx-border-color: #02378c;
+    -fx-background-color: #012256;
+    -fx-border-width: 3;
+}
+
+#boatInfoTable{
+    -fx-border-color: #012256;
+    -fx-border-width: 3;
+}
+
+/* Title menu buttons */
+#hostAGameBtn {
+    -fx-background-image: url("/visualiser/images/hostAGameBtn.png");
+    -fx-background-size: 150px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#hostAGameBtn:pressed {
+    -fx-background-image: url("/visualiser/images/hostAGameBtnPressed.png");
+    -fx-background-size: 150px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#btnJoin {
+    -fx-background-image: url("/visualiser/images/JoinAGameBtn.png");
+    -fx-background-size: 150px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#btnJoin:pressed {
+    -fx-background-image: url("/visualiser/images/JoinAGameBtnPressed.png");
+    -fx-background-size: 150px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#tutorialButton {
+    -fx-background-image: url("/visualiser/images/howToPlayBtn.png");
+    -fx-background-size: 150px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#tutorialButton:pressed {
+    -fx-background-image: url("/visualiser/images/howToPlayBtnPressed.png");
+    -fx-background-size: 150px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#controlsBtn {
+    -fx-background-image: url("/visualiser/images/controlsBtn.png");
+    -fx-background-size: 150px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#controlsBtn:pressed {
+    -fx-background-image: url("/visualiser/images/controlsBtnPressed.png");
+    -fx-background-size: 150px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+/* host game lobby buttons */
+
+#hostGameBtn {
+    -fx-background-image: url("/visualiser/images/startGameBtn.png");
+    -fx-background-size: 150px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#hostGameBtn:pressed {
+    -fx-background-image: url("/visualiser/images/startGameBtnPressed.png");
+    -fx-background-size: 150px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#mainMenuBtn {
+    -fx-background-image: url("/visualiser/images/mainMenuBtn.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+
+#mainMenuBtn:pressed {
+    -fx-background-image: url("/visualiser/images/mainMenuBtnPressed.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+/* match browsing lobby buttons */
+
+#addBtn {
+    -fx-background-image: url("/visualiser/images/addBtn.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#addBtn:pressed {
+    -fx-background-image: url("/visualiser/images/addBtnPressed.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#refreshBtn {
+    -fx-background-image: url("/visualiser/images/refreshBtn.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#refreshBtn:pressed {
+    -fx-background-image: url("/visualiser/images/refreshBtnPressed.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#refreshBtn {
+    -fx-background-image: url("/visualiser/images/refreshBtn.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#joinGameBtn {
+    -fx-background-image: url("/visualiser/images/participateBtn.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#joinGameBtn:pressed {
+    -fx-background-image: url("/visualiser/images/participateBtnPressed.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#spectateButton {
+    -fx-background-image: url("/visualiser/images/spectateBtn.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#spectateButton:pressed {
+    -fx-background-image: url("/visualiser/images/spectateBtnPressed.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+/* in-game lobby buttons */
+
+#quitBtn {
+    -fx-background-image: url("/visualiser/images/quitBtn.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#quitBtn:pressed {
+    -fx-background-image: url("/visualiser/images/quitBtnPressed.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#startButton {
+    -fx-background-image: url("/visualiser/images/startBtn.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#startButton:pressed {
+    -fx-background-image: url("/visualiser/images/startBtnPressed.png");
+    -fx-background-size: 115px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#gameTitle .text{
+    -fx-stroke: black;
+    -fx-stroke-width:1px;
+}

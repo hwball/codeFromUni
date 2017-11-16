@@ -1,0 +1,228 @@
+.root {
+    -fx-base: rgb(215, 232, 218);
+    -fx-background: rgba(0, 255, 190, 0.11);
+
+    /* make controls (buttons, thumb, etc.) slightly lighter */
+    -fx-color: derive(-fx-base, 2.5%);
+
+    /* text fields and table rows background */
+    -fx-control-inner-background: rgb(200, 200, 200);
+    /* version of -fx-control-inner-background for alternative rows */
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, 10%);
+
+    /* text colors depending on background's brightness */
+    -fx-light-text-color: rgb(80, 80, 80);
+    -fx-mid-text-color: rgb(20, 20, 20);
+    -fx-dark-text-color: rgb(0, 0, 0);
+
+    /*highlighting/accenting objects.  */
+    -fx-accent: rgb(128, 128, 128);
+
+    /* color of non-focused yet selected elements */
+    -fx-selection-bar-non-focused: rgb(50, 50, 50);
+
+    /*Focus colour*/
+    -fx-focus-color: rgb(128, 128, 128);
+}
+
+/* Titles */
+#title {
+    -fx-font-size: 32px;
+    -fx-font-family: "Trebuchet MS";
+    -fx-text-fill: rgb(10, 123, 125);
+}
+
+/* Regular text */
+#lblLength {
+    -fx-font-family: "Trebuchet MS";
+}
+
+
+/* Buttons */
+#hostAGameBtn, #hostGameBtn, #btnJoin, #tutorialButton, #controlsBtn,
+    #mainMenuBtn, #addBtn, #refreshBtn, #joinGameBtn, #spectateButton,
+    #quitBtn, #startButton
+{
+    -fx-background-size: 150px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-focus-color: transparent;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    /*-fx-border-color: rgb(10, 123, 125);*/
+    /*-fx-border-width: 2px;*/
+}
+
+/* Smaller buttons */
+#mainMenuBtn, #addBtn, #refreshBtn, #joinGameBtn, #spectateButton, #quitBtn, #startButton{
+    -fx-background-size: 115px;
+}
+
+/* Images for buttons */
+    /* Title menu buttons */
+    #hostAGameBtn {
+        -fx-background-image: url("/visualiser/images/hostAGameBtn.png");
+    }
+    #hostAGameBtn:pressed {
+        -fx-background-image: url("/visualiser/images/hostAGameBtnPressed.png");
+    }
+    #btnJoin {
+        -fx-background-image: url("/visualiser/images/JoinAGameBtn.png");
+    }
+    #btnJoin:pressed {
+        -fx-background-image: url("/visualiser/images/JoinAGameBtnPressed.png");
+    }
+    #tutorialButton {
+        -fx-background-image: url("/visualiser/images/howToPlayBtn.png");
+    }
+    #tutorialButton:pressed {
+        -fx-background-image: url("/visualiser/images/howToPlayBtnPressed.png");
+    }
+    #controlsBtn {
+        -fx-background-image: url("/visualiser/images/controlsBtn.png");
+    }
+    #controlsBtn:pressed {
+        -fx-background-image: url("/visualiser/images/controlsBtnPressed.png");
+    }
+
+    /* host game lobby buttons */
+    #hostGameBtn {
+        -fx-background-image: url("/visualiser/images/startGameBtn.png");
+    }
+    #hostGameBtn:pressed {
+        -fx-background-image: url("/visualiser/images/startGameBtnPressed.png");
+    }
+    #mainMenuBtn {
+        -fx-background-image: url("/visualiser/images/mainMenuBtn.png");
+        /*-fx-background-size: 115px;*/
+    }
+    #mainMenuBtn:pressed {
+        -fx-background-image: url("/visualiser/images/mainMenuBtnPressed.png");
+    }
+    #startButton{
+        -fx-background-image: url("/visualiser/images/startBtn.png");
+    }
+
+    #startButton:pressed {
+        -fx-background-image: url("/visualiser/images/startBtnPressed.png");
+    }
+    /* match browsing lobby buttons */
+    #addBtn {
+        -fx-background-image: url("/visualiser/images/addBtn.png");
+    }
+    #addBtn:pressed {
+        -fx-background-image: url("/visualiser/images/addBtnPressed.png");
+    }
+    #refreshBtn {
+        -fx-background-image: url("/visualiser/images/refreshBtn.png");
+    }
+    #refreshBtn:pressed {
+        -fx-background-image: url("/visualiser/images/refreshBtnPressed.png");
+    }
+    #joinGameBtn {
+        -fx-background-image: url("/visualiser/images/participateBtn.png");
+    }
+    #joinGameBtn:pressed {
+        -fx-background-image: url("/visualiser/images/participateBtnPressed.png");
+    }
+    #spectateButton {
+        -fx-background-image: url("/visualiser/images/spectateBtn.png");
+    }
+    #spectateButton:pressed {
+        -fx-background-image: url("/visualiser/images/spectateBtnPressed.png");
+    }
+
+    /* in-game lobby buttons */
+    #quitBtn {
+        -fx-background-image: url("/visualiser/images/quitBtn.png");
+    }
+    #quitBtn:pressed {
+        -fx-background-image: url("/visualiser/images/quitBtnPressed.png");
+    }
+
+/* Fix derived prompt color for text fields */
+.text-input {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, +0%);
+    -fx-background-color: #a9a9a9, black, grey;
+}
+
+/* Keep prompt invisible when focused (above color fix overrides it) */
+.text-input:focused {
+    -fx-prompt-text-fill: transparent;
+}
+
+/* Fix scroll bar buttons arrows colors */
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(255, 255, 255);
+}
+
+.scroll-bar > .increment-button:hover > .increment-arrow,
+.scroll-bar > .decrement-button:hover > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(255, 255, 255);
+}
+
+.scroll-bar > .increment-button:pressed > .increment-arrow,
+.scroll-bar > .decrement-button:pressed > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(255, 255, 255);
+}
+
+#arrowImage {
+    -fx-graphic: url("/visualiser/images/arrow.png");
+}
+
+/* Host Game / Map Selection */
+    #nextButton, #previousButton {
+        -fx-background-image: url("/visualiser/images/ArrowClick.png");
+        -fx-background-size: 60px;
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: center center;
+        -fx-focus-color: transparent;
+        -fx-background-color: transparent;
+        -fx-border-color: transparent;
+    }
+
+    #nextButton {
+        -fx-rotate: 180;
+    }
+
+    #nextButton:pressed {
+        -fx-background-image: url("/visualiser/images/ArrowSelect.png");
+    }
+
+    #previousButton:pressed {
+        -fx-background-image: url("/visualiser/images/ArrowSelect.png");
+    }
+
+    .slider .thumb {
+        -fx-background-image: url("/visualiser/images/sun.png");
+        -fx-background-size: 25px;
+        -fx-pref-height: 25px;
+        -fx-pref-width: 25px;
+        -fx-background-position: top;
+        -fx-background-repeat: no-repeat;
+        -fx-focus-color: transparent;
+        -fx-background-color: transparent;
+    }
+
+    .slider .track {
+        -fx-control-inner-background: #166df1;
+        -fx-border-color: #6a80ff;
+        -fx-border-radius: 0.25em, 0.25em, 0.166667em;
+    }
+
+#lineChartWrapper{
+    -fx-border-color: #02378c;
+    -fx-background-color: #4783e0;
+    -fx-border-width: 3;
+}
+
+#boatInfoTable{
+    -fx-border-color: #012256;
+    -fx-border-width: 3;
+}
+
+#gameTitle .text{
+    -fx-stroke: black;
+    -fx-stroke-width:1px;
+}

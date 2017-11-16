@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchor" fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualiser.Controllers.KeyBindingsController">
+   <children>
+      <Label fx:id="lblTitle" layoutX="172.0" layoutY="14.0" text="Key Bindings">
+         <font>
+            <Font name="Comic Sans MS" size="44.0" />
+         </font>
+      </Label>
+      <Button id="menu" fx:id="btnCancel" layoutX="430.0" layoutY="428.0"
+              mnemonicParsing="false" onAction="#cancel" prefWidth="160.0" text="Cancel" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="20.0" />
+      <ListView fx:id="lstControl" focusTraversable="false" layoutX="27.0" layoutY="88.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="150.0" />
+      <ListView fx:id="lstKey" focusTraversable="false" layoutX="176.0" layoutY="88.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="150.0" />
+      <ListView fx:id="lstDescription" focusTraversable="false" layoutX="325.0" layoutY="88.0" prefHeight="322.0" prefWidth="250.0" />
+      <Button id="menu" fx:id="btnSave" layoutX="220.0" layoutY="428.0" mnemonicParsing="false" onAction="#save" prefWidth="160.0" text="Save" AnchorPane.bottomAnchor="18.0" />
+      <Button id="menu" fx:id="btnReset" layoutX="20.0" layoutY="428.0" mnemonicParsing="false" onAction="#reset" prefWidth="160.0" text="Reset to Default" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="20.0" />
+   </children>
+</AnchorPane>

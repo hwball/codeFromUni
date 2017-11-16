@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="450.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="seng202.group6.controller.AdvFilterController">
+    <ComboBox fx:id="comboDataType" layoutX="30.0" layoutY="46.0" onAction="#setSearchTypes"
+              prefHeight="31.0" prefWidth="261.0"/>
+    <ComboBox fx:id="comboSearchType" layoutX="30.0" layoutY="120.0" onAction="#setForSearchType"
+              prefHeight="31.0" prefWidth="261.0"/>
+    <Label layoutX="30.0" layoutY="25.0" text="Data Type:"/>
+    <Label layoutX="30.0" layoutY="99.0" text="Search Type:"/>
+    <Label layoutX="30.0" layoutY="173.0" text="Search Term"/>
+    <Button fx:id="buttonAddFilter" layoutX="30.0" layoutY="340.0" mnemonicParsing="false"
+            onAction="#addFilter" prefHeight="31.0" prefWidth="118.0" text="Add Condition"/>
+    <Button fx:id="buttonApplyFilter" layoutX="173.0" layoutY="394.0" mnemonicParsing="false"
+            onAction="#applyFilter" prefHeight="31.0" prefWidth="118.0" text="Apply Filter(s)"/>
+    <Button fx:id="buttonExit" layoutX="30.0" layoutY="394.0" mnemonicParsing="false"
+            onAction="#exitAdvFilter" prefHeight="31.0" prefWidth="118.0" text="Exit"/>
+    <TableView fx:id="tableFilter" editable="true" layoutX="318.0" layoutY="25.0" prefHeight="402.0"
+               prefWidth="488.0">
+      <columns>
+          <TableColumn fx:id="columnDataType" prefWidth="120.0" text="Data Type"/>
+          <TableColumn fx:id="columnSearchType" prefWidth="171.0" text="Search Type"/>
+          <TableColumn fx:id="columnSearchTerm" prefWidth="196.0" text="Search Term"/>
+      </columns>
+    </TableView>
+    <Button fx:id="buttonDeleteFilter" layoutX="173.0" layoutY="340.0" mnemonicParsing="false"
+            onAction="#deleteFilter" prefHeight="31.0" prefWidth="118.0" text="Delete"/>
+    <TextField fx:id="textFieldSearchTerm" layoutX="30.0" layoutY="194.0" prefHeight="31.0"
+               prefWidth="261.0"/>
+    <TextField fx:id="textFieldMin" layoutX="30.0" layoutY="194.0" prefHeight="31.0"
+               prefWidth="118.0" promptText="min"/>
+    <TextField fx:id="textFieldMax" layoutX="173.0" layoutY="194.0" prefHeight="31.0"
+               prefWidth="118.0" promptText="max"/>
+</Pane>

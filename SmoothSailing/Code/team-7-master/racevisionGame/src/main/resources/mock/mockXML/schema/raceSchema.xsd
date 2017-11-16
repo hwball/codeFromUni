@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Race">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="RaceID" type="xs:int"/>
+                <xs:element name="RaceType" type="xs:string"/>
+                <xs:element name="CreationTimeDate" type="xs:string"/>
+                <xs:element name="RaceStartTime">
+                    <xs:complexType>
+                        <xs:attribute name="Postpone" type="xs:string" use="required"/>
+                        <xs:attribute name="Time" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Participants">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Yacht" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:attribute name="SourceID" type="xs:int" use="required"/>
+                                    <xs:attribute name="Entry" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CompoundMarkSequence">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Corner" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="CompoundMarkID" type="xs:int" use="required"/>
+                                    <xs:attribute name="SeqID" type="xs:int" use="required"/>
+                                    <xs:attribute name="Rounding" type="xs:string" use="required"/>
+                                    <xs:attribute name="ZoneSize" type="xs:int" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Course">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="CompoundMark" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Mark" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="SeqId" type="xs:int"/>
+                                                <xs:attribute name="Name" type="xs:string" use="required"/>
+                                                <xs:attribute name="TargetLat" type="xs:double" use="required"/>
+                                                <xs:attribute name="TargetLng" type="xs:double" use="required"/>
+                                                <xs:attribute name="SourceID" type="xs:int" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="CompoundMarkID" type="xs:int" use="required"/>
+                                    <xs:attribute name="Name" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CourseLimit">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Limit" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="Lat" type="xs:double" use="required"/>
+                                    <xs:attribute name="Lon" type="xs:double" use="required"/>
+                                    <xs:attribute name="SeqID" type="xs:int" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

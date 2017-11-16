@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="lobbyWrapper" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualiser.Controllers.LobbyController">
+   <children>
+      <GridPane fx:id="connection" prefHeight="600.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="303.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="477.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="182.0" minHeight="10.0" prefHeight="116.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="434.0" minHeight="10.0" prefHeight="348.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="174.0" minHeight="10.0" prefHeight="157.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TableView fx:id="lobbyTable" prefHeight="342.0" prefWidth="680.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <columns>
+                  <TableColumn fx:id="gameNameColumn" prefWidth="223.0" text="Game Name" />
+                  <TableColumn fx:id="hostNameColumn" prefWidth="280.0" text="Host Name" />
+                  <TableColumn fx:id="statusColumn" prefWidth="176.0" text="Status" />
+               </columns>
+               <GridPane.margin>
+                  <Insets left="50.0" right="50.0" />
+               </GridPane.margin>
+            </TableView>
+            <Label fx:id="title" text="Available Games"
+                   GridPane.columnSpan="2" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <GridPane fx:id="ipPortGridPane" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="addressFld" promptText="Address" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="50.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="portFld" promptText="Port Number">
+                     <GridPane.margin>
+                        <Insets left="50.0" right="20.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </GridPane>
+            <GridPane fx:id="buttonsGridPane" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="132.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="132.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="refreshBtn" maxHeight="50.0" maxWidth="125.0" mnemonicParsing="false" onAction="#refreshBtnPressed" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Button>
+                  <Button fx:id="addBtn" maxHeight="50.0" maxWidth="125.0" mnemonicParsing="false" onAction="#addConnectionPressed">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Button>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Button fx:id="joinGameBtn" maxHeight="50.0" maxWidth="125.0" mnemonicParsing="false" onAction="#connectParticipate" prefHeight="50.0" prefWidth="125.0" />
+                        <Button fx:id="spectateButton" maxHeight="50.0" maxWidth="125.0" mnemonicParsing="false" onAction="#connectSpectate" prefHeight="50.0" prefWidth="125.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <Button fx:id="mainMenuBtn" maxHeight="50.0" maxWidth="125.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#menuBtnPressed" prefHeight="50.0" prefWidth="125.0">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

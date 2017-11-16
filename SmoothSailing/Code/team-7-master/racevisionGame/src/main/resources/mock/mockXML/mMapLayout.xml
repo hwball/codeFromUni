@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Race>
+    <RaceID>5326</RaceID>
+    <RaceType>FLEET</RaceType>
+    <CreationTimeDate>RACE_CREATION_TIME</CreationTimeDate>
+    <RaceStartTime Postpone="false" Time="RACE_START_TIME"/>
+    <Participants>
+
+    </Participants>
+    <CompoundMarkSequence>
+        <Corner SeqID="1" CompoundMarkID="1" Rounding="SP" ZoneSize="3" />
+        <Corner SeqID="2" CompoundMarkID="2" Rounding="Starboard" ZoneSize="3" />
+        <Corner SeqID="3" CompoundMarkID="3" Rounding="Starboard" ZoneSize="3" />
+        <Corner SeqID="4" CompoundMarkID="2" Rounding="Starboard" ZoneSize="3" />
+        <Corner SeqID="5" CompoundMarkID="4" Rounding="SP" ZoneSize="3" />
+    </CompoundMarkSequence>
+    <Course>
+        <CompoundMark CompoundMarkID="1" Name="Start Line">
+            <Mark SeqId="1" Name="PRO" TargetLat="1.681354" TargetLng="1.132354" SourceID="101"/>
+            <Mark SeqId="2" Name="PIN" TargetLat="1.680354" TargetLng="1.135604" SourceID="102"/>
+        </CompoundMark>
+        <CompoundMark CompoundMarkID="2" Name="Marker 1">
+            <Mark Name="Marker1" TargetLat="1.780354" TargetLng="1.140600" SourceID="103"/>
+        </CompoundMark>
+        <CompoundMark CompoundMarkID="3" Name="Marker 2">
+            <Mark Name="Marker2" TargetLat="1.730354" TargetLng="1.137604" SourceID="104"/>
+        </CompoundMark>
+        <CompoundMark CompoundMarkID="4" Name="Finish Line">
+            <Mark SeqId="1" Name="FL" TargetLat="1.681354" TargetLng="1.132354" SourceID="105"/>
+            <Mark SeqId="2" Name="FR" TargetLat="1.680354" TargetLng="1.135604" SourceID="106"/>
+        </CompoundMark>
+    </Course>
+    <CourseLimit>
+        <Limit Lat="1.675354" Lon="1.122354" SeqID="1"/>
+
+        <Limit Lat="1.680354" Lon="1.141600" SeqID="2"/>
+
+        <Limit Lat="1.790354" Lon="1.146600" SeqID="3"/>
+
+        <Limit Lat="1.785354" Lon="1.127354" SeqID="4"/>
+
+    </CourseLimit>
+</Race>

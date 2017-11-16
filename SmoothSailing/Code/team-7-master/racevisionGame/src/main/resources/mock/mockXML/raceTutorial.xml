@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Race>
+    <RaceID>9999</RaceID>
+    <RaceType>FLEET</RaceType>
+    <CreationTimeDate>RACE_CREATION_TIME</CreationTimeDate>
+    <RaceStartTime Postpone="false" Time="RACE_START_TIME"/>
+    <Participants>
+        <!--<Yacht SourceID="121"/>-->
+    </Participants>
+    <CompoundMarkSequence>
+        <Corner SeqID="1" CompoundMarkID="1" Rounding="SP" ZoneSize="3" />
+        <Corner SeqID="2" CompoundMarkID="2" Rounding="SP" ZoneSize="3"/>
+    </CompoundMarkSequence>
+    <Course>
+        <CompoundMark CompoundMarkID="1" Name="Start Line">
+            <Mark SeqId="1" Name="PRO" TargetLat="32.288148" TargetLng="-64.852996" SourceID="101"/>
+            <Mark SeqId="2" Name="PIN" TargetLat="32.290148" TargetLng="-64.854996" SourceID="102"/>
+        </CompoundMark>
+        <CompoundMark CompoundMarkID="2" Name="Finish Line">
+            <Mark Name="FL" SeqId="1" TargetLat="42.315911" TargetLng="-64.846996" SourceID="108"/>
+            <Mark Name="FR" SeqId="2" TargetLat="42.315911" TargetLng="-64.848996" SourceID="109"/>
+        </CompoundMark>
+    </Course>
+    <CourseLimit>
+
+        <Limit Lat="32.317911" Lon="-64.836996" SeqID="1"/>
+        <Limit Lat="32.286148" Lon="-64.836996" SeqID="2"/>
+        <Limit Lat="32.286148" Lon="-64.856996" SeqID="3"/>
+        <Limit Lat="32.317911" Lon="-64.856996" SeqID="4"/>
+
+        <!--<Limit Lat="32.313922" Lon="-64.837168" SeqID="1"/>
+        <Limit Lat="32.317379" Lon="-64.839291" SeqID="2"/>
+        <Limit Lat="32.317911" Lon="-64.836996" SeqID="3"/>
+        <Limit Lat="32.317257" Lon="-64.83626" SeqID="4"/>
+        <Limit Lat="32.304273" Lon="-64.822834" SeqID="5"/>
+        <Limit Lat="32.279097" Lon="-64.841545" SeqID="6"/>
+        <Limit Lat="32.279604" Lon="-64.849871" SeqID="7"/>
+        <Limit Lat="32.289545" Lon="-64.854162" SeqID="8"/>
+        <Limit Lat="32.290198" Lon="-64.858711" SeqID="9"/>
+        <Limit Lat="32.297164" Lon="-64.856394" SeqID="10"/>
+        <Limit Lat="32.296148" Lon="-64.849184" SeqID="11"/>-->
+    </CourseLimit>
+</Race>

@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>seng302</groupId>
+    <artifactId>team-7</artifactId>
+    <packaging>pom</packaging>
+    <version>2.0</version>
+    <name>team-7</name>
+
+    <modules>
+        <module>racevisionGame</module>
+        <module>dedicatedServer</module>
+        <module>matchBrowser</module>
+    </modules>
+
+    <url>https://eng-git.canterbury.ac.nz/SENG302-2016/team-7</url>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
+
+</project>

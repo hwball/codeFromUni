@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="seng202.group6.controller.DetailPaneController">
+    <VBox layoutX="145.0" layoutY="45.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane>
+            <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane maxHeight="1.7976931348623157E308"
+                            maxWidth="1.7976931348623157E308">
+                    <padding>
+                        <Insets left="5.0"/>
+                    </padding>
+                    <HBox spacing="10.0">
+                        <VBox nodeOrientation="RIGHT_TO_LEFT" spacing="1.0">
+                            <Text fx:id="extraDetailTextTitle1"
+                                  nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="Name:">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextTitle2"
+                                  nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="City:">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextTitle3"
+                                  nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="Country:">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextTitle4"
+                                  nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="IATA/FAA:">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextTitle5"
+                                  nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="ICAO:">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextTitle6"
+                                  nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="Latitude:">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextTitle7"
+                                  nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="Longitude:">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextTitle8"
+                                  nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="Altitude:">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextTitle9"
+                                  nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="Time Zone:">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextTitle10"
+                                  nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="Daylight Savings Time:">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextTitle11"
+                                  nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="Time Zone Database:">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                        </VBox>
+                        <VBox spacing="1.0">
+                            <Text fx:id="extraDetailTextInfo1" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="nameText"
+                                  wrappingWidth="206.06282806396484">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextInfo2" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="cityText">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextInfo3" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="countryText">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextInfo4" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="iataText">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextInfo5" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="icaoText">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextInfo6" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="latText">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextInfo7" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="lonText">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextInfo8" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="altText">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextInfo9" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="tzText">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextInfo10" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="dstText">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                            <Text fx:id="extraDetailTextInfo11" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" text="tzdbText">
+                                <font>
+                                    <Font size="14.0"/>
+                                </font>
+                            </Text>
+                        </VBox>
+                    </HBox>
+                </AnchorPane>
+            </ScrollPane>
+        </AnchorPane>
+        <ToolBar prefHeight="40.0" prefWidth="200.0">
+            <Button fx:id="butt_list_view" mnemonicParsing="false" onAction="#hideExtraDetail"
+                    text="List view"/>
+        </ToolBar>
+    </VBox>
+</AnchorPane>

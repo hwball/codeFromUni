@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Race>
+    <RaceID>5326</RaceID>
+    <RaceType>FLEET</RaceType>
+    <CreationTimeDate>RACE_CREATION_TIME</CreationTimeDate>
+    <RaceStartTime Postpone="false" Time="RACE_START_TIME"/>
+    <Participants>
+
+    </Participants>
+    <CompoundMarkSequence>
+        <Corner SeqID="1" CompoundMarkID="1" Rounding="SP" ZoneSize="3" />
+        <Corner SeqID="2" CompoundMarkID="2" Rounding="Port" ZoneSize="3" />
+        <Corner SeqID="3" CompoundMarkID="4" Rounding="Starboard" ZoneSize="3" />
+        <Corner SeqID="4" CompoundMarkID="2" Rounding="Port" ZoneSize="3" />
+        <Corner SeqID="5" CompoundMarkID="3" Rounding="Port" ZoneSize="3" />
+        <Corner SeqID="7" CompoundMarkID="5" Rounding="SP" ZoneSize="3"/>
+    </CompoundMarkSequence>
+    <Course>
+        <CompoundMark CompoundMarkID="1" Name="Start Line">
+            <Mark SeqId="1" Name="PRO" TargetLat="1.681354" TargetLng="1.132354" SourceID="101"/>
+            <Mark SeqId="2" Name="PIN" TargetLat="1.681354" TargetLng="1.135604" SourceID="102"/>
+        </CompoundMark>
+        <CompoundMark CompoundMarkID="2" Name="Marker 1">
+            <Mark Name="Marker1" TargetLat="1.728713" TargetLng="1.131345" SourceID="103"/>
+        </CompoundMark>
+
+        <CompoundMark CompoundMarkID="3" Name="Marker 2">
+            <Mark Name="Marker2" TargetLat="1.725120" TargetLng="1.109701" SourceID="104"/>
+        </CompoundMark>
+        <CompoundMark CompoundMarkID="4" Name="Gate 1">
+            <Mark Name="LGL" SeqId="1" TargetLat="1.707354" TargetLng="1.130505" SourceID="105"/>
+            <Mark Name="LGR" SeqId="2" TargetLat="1.707404" TargetLng="1.133304" SourceID="106"/>
+        </CompoundMark>
+        <CompoundMark CompoundMarkID="5" Name="Finish Line">
+            <Mark Name="FL" SeqId="1" TargetLat="1.690202" TargetLng="1.109606" SourceID="107"/>
+            <Mark Name="FR" SeqId="2" TargetLat="1.692202" TargetLng="1.112629" SourceID="108"/>
+        </CompoundMark>
+    </Course>
+    <CourseLimit>
+        <Limit Lat="1.73558" Lon="1.105505" SeqID="1"/>
+
+        <Limit Lat="1.732444" Lon="1.137105" SeqID="2"/>
+
+        <Limit Lat="1.680404" Lon="1.140505" SeqID="3"/>
+
+        <Limit Lat="1.675232" Lon="1.122202" SeqID="4"/>
+
+        <Limit Lat="1.685101" Lon="1.120222" SeqID="5"/>
+
+        <Limit Lat="1.680101" Lon="1.102505" SeqID="6"/>
+
+    </CourseLimit>
+</Race>

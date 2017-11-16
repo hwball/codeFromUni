@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seng202.group6.controller.MainWindowController">
+   <left>
+      <TreeView fx:id="listTreeView" layoutX="2.0" layoutY="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#treeClicked" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </TreeView>
+   </left>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <MenuBar>
+            <Menu mnemonicParsing="false" text="File">
+               <MenuItem mnemonicParsing="false" onAction="#openImporter"
+                         text="Import Data Files..."/>
+               <SeparatorMenuItem mnemonicParsing="false"/>
+               <MenuItem mnemonicParsing="false" onAction="#savePersistent" text="Save"/>
+               <MenuItem mnemonicParsing="false" onAction="#saveAsPersistent"
+                         text="Save As..."/>
+               <MenuItem mnemonicParsing="false" onAction="#loadPersistent" text="Load..."/>
+               <SeparatorMenuItem mnemonicParsing="false"/>
+               <MenuItem mnemonicParsing="false" onAction="#closeProgram" text="Close"/>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Other">
+               <MenuItem mnemonicParsing="false" onAction="#openDistanceCalculator"
+                         text="Distance Calculator"/>
+               <MenuItem mnemonicParsing="false" onAction="#createRecordList"
+                         text="Create New List"/>
+               <MenuItem mnemonicParsing="false" onAction="#openSettings" text="Settings"/>
+            </Menu>
+         </MenuBar>
+         <TitledPane text="Filtering">
+            <fx:include fx:id="includedFilterView" source="Main-Filter.fxml"/>
+         </TitledPane>
+      </VBox>
+   </top>
+   <center>
+      <TabPane fx:id="tabPaneMain" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+         <Tab fx:id="tabRawData" text="Raw Data View">
+            <AnchorPane fx:id="anchorRDV">
+               <fx:include fx:id="includedRawDataView" source="Main-RawDataViewer.fxml"/>
+            </AnchorPane>
+         </Tab>
+         <Tab fx:id="tabMap" text="Map View">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <fx:include fx:id="includedMapView" source="Main-Map.fxml"/>
+            </AnchorPane>
+         </Tab>
+         <Tab fx:id="tabGraphs" text="Graphs">
+            <AnchorPane>
+               <fx:include fx:id="includedGraphsView" source="Main-Graph.fxml"/>
+            </AnchorPane>
+         </Tab>
+      </TabPane>
+   </center>
+</BorderPane>

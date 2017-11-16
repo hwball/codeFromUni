@@ -1,0 +1,49 @@
+.label, .list-view {
+    -fx-text-fill: black;
+}
+
+.list-view .list-cell {
+    -fx-cell-size: 40;
+    -fx-font-family: "Tahoma";
+    -fx-background-color: #fffff0;
+    -fx-alignment: center;
+}
+
+.list-view .list-cell:even {
+    -fx-background-color: #ffffdc;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #f9e5c3;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+}
+
+.button {
+    -fx-background-color: linear-gradient(#acdeff 50%, #a9c8ff 100%);
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-text-fill: #242d35;
+    -fx-font-size: 12px;
+    -fx-font-family: "Courier New";
+    -fx-border-color: #a9c8ff;
+}
+
+.button:focused {
+    -fx-background-color: white;
+    -fx-border-color: #0056bd;
+}
+
+#anchor {
+    -fx-background-color: #fdfac3;
+}
+#menu{
+    -fx-background-color: linear-gradient(#acdeff 50%, #a9c8ff 100%);
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-text-fill: #242d35;
+    -fx-font-size: 12px;
+    -fx-font-family: "Verdana";
+    -fx-border-color: #a9c8ff;
+}

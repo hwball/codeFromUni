@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<BoatConfig>
+    <Boats>
+
+        <!--Mark Boats-->
+        <Boat Type="Mark" BoatName="PRO" SourceID="101" >
+            <GPSposition X= "-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+        <Boat Type="Mark" BoatName="PIN" SourceID="102" >
+            <GPSposition X= "-64.855242" Y="32.293771" Z="0"/>
+        </Boat>
+        <Boat Type="Mark" BoatName="FL" SourceID="108" >
+            <GPSposition X= "-64.839291" Y="32.317379" Z="0"/>
+        </Boat>
+        <Boat Type="Mark" BoatName="FR" SourceID="109" >
+            <GPSposition X= "-64.83626" Y="32.317257" Z="0"/>
+        </Boat>
+
+        <!--Participants-->
+        <!--Participants-->
+        <Boat BoatName="Emirates Team New Zealand" HullNum="RG01" ShapeID="0" ShortName="NZL" SourceID="121" StoweName="NZL" Type="Yacht">
+            <GPSposition X="-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+        <!--<Boat BoatName="Land Rover BAR" HullNum="RG01" ShapeID="0" ShortName="GBR" SourceID="122" StoweName="GBR" Type="Yacht">
+            <GPSposition X="-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+        <Boat BoatName="SoftBank Team Japan" HullNum="RG01" ShapeID="0" ShortName="JPN" SourceID="123" StoweName="JPN" Type="Yacht">
+            <GPSposition X="-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+        <Boat BoatName="Groupama Team France" HullNum="RG01" ShapeID="0" ShortName="FRA" SourceID="124" StoweName="FRA" Type="Yacht">
+            <GPSposition X="-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+        <Boat BoatName="Artemis Racing" HullNum="RG01" ShapeID="0" ShortName="SWE" SourceID="125" StoweName="SWE" Type="Yacht">
+            <GPSposition X="-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+        <Boat BoatName="ORACLE TEAM USA" HullNum="RG01" ShapeID="0" ShortName="USA" SourceID="126" StoweName="USA" Type="Yacht">
+            <GPSposition X="-64.854304" Y="32.296577" Z="0"/>
+        </Boat>-->
+    </Boats>
+</BoatConfig>

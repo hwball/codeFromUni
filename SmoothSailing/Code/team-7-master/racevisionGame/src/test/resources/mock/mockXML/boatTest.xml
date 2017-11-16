@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<BoatConfig>
+    <Boats>
+
+        <!--Mark Boats-->
+        <Boat Type="Mark" BoatName="PRO" SourceID="101" >
+            <GPSposition X= "-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+        <Boat Type="Mark" BoatName="PIN" SourceID="102" >
+            <GPSposition X= "-64.855242" Y="32.293771" Z="0"/>
+        </Boat>
+        <Boat Type="Mark" BoatName="Marker1" SourceID="103" >
+            <GPSposition X= "-64.843983" Y="32.293039" Z="0"/>
+        </Boat>
+        <Boat Type="Mark" BoatName="WGL" SourceID="104" >
+            <GPSposition X= "-64.850045" Y="32.28468" Z="0"/>
+        </Boat>
+        <Boat Type="Mark" BoatName="WGR" SourceID="105" >
+            <GPSposition X= "-64.847591" Y="32.280164" Z="0"/>
+        </Boat>
+        <Boat Type="Mark" BoatName="LGL" SourceID="106" >
+            <GPSposition X= "-64.835249" Y="32.309693" Z="0"/>
+        </Boat>
+        <Boat Type="Mark" BoatName="LGR" SourceID="107" >
+            <GPSposition X= "-64.831785" Y="32.308046" Z="0"/>
+        </Boat>
+        <Boat Type="Mark" BoatName="FL" SourceID="108" >
+            <GPSposition X= "-64.839291" Y="32.317379" Z="0"/>
+        </Boat>
+        <Boat Type="Mark" BoatName="FR" SourceID="109" >
+            <GPSposition X= "-64.83626" Y="32.317257" Z="0"/>
+        </Boat>
+
+        <!--Participants-->
+        <Boat BoatName="Team ORACLE USA" HullNum="RG01" ShapeID="0" ShortName="USA" SourceID="121" StoweName="USA" Type="Yacht">
+            <GPSposition X="-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+        <Boat BoatName="Land Rover BAR" HullNum="RG01" ShapeID="0" ShortName="GBR" SourceID="122" StoweName="GBR" Type="Yacht">
+            <GPSposition X="-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+        <Boat BoatName="SoftBank Team Japan" HullNum="RG01" ShapeID="0" ShortName="JPN" SourceID="123" StoweName="JPN" Type="Yacht">
+            <GPSposition X="-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+        <Boat BoatName="Groupama Team France" HullNum="RG01" ShapeID="0" ShortName="FRA" SourceID="124" StoweName="FRA" Type="Yacht">
+            <GPSposition X="-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+        <Boat BoatName="Artemis Racing" HullNum="RG01" ShapeID="0" ShortName="SWE" SourceID="125" StoweName="SWE" Type="Yacht">
+            <GPSposition X="-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+        <Boat BoatName="Emirates Team New Zealand" HullNum="RG01" ShapeID="0" ShortName="NZL" SourceID="126" StoweName="NZL" Type="Yacht">
+            <GPSposition X="-64.854304" Y="32.296577" Z="0"/>
+        </Boat>
+    </Boats>
+</BoatConfig>

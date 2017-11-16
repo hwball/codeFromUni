@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seng202.group6.controller.DistanceController">
+   <top>
+       <MenuBar BorderPane.alignment="CENTER">
+           <Menu mnemonicParsing="false" text="File">
+               <MenuItem fx:id="close" mnemonicParsing="false" onAction="#close" text="Close"/>
+           </Menu>
+           <Menu mnemonicParsing="false" text="Units">
+               <RadioMenuItem fx:id="metRadioMenuItem" mnemonicParsing="false" selected="true"
+                              text="Metric"/>
+               <RadioMenuItem fx:id="impRadioMenuItem" mnemonicParsing="false" text="Imperial"/>
+           </Menu>
+       </MenuBar>
+   </top>
+   <center>
+       <GridPane BorderPane.alignment="CENTER">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="359.0" minWidth="10.0"
+                                  prefWidth="298.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.0" minWidth="10.0"
+                                  prefWidth="302.0"/>
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="101.0" minHeight="10.0" prefHeight="77.0"
+                               vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="90.0"
+                               vgrow="SOMETIMES"/>
+           </rowConstraints>
+           <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowSpan="2">
+               <Text layoutX="50.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     text="Longitude" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="70.0"/>
+               <TextField fx:id="sourceLonTextField" layoutX="50.0" layoutY="87.0"
+                          AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="87.0"/>
+               <Text layoutX="50.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     text="Latitude" wrappingWidth="64.50439453125" AnchorPane.leftAnchor="50.0"
+                     AnchorPane.topAnchor="115.0"/>
+               <TextField fx:id="sourceLatTextField" layoutX="50.0" layoutY="132.0"
+                          AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="132.0"/>
+               <Text layoutX="50.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     text="Source Airport" AnchorPane.leftAnchor="50.0"
+                     AnchorPane.rightAnchor="132.84375" AnchorPane.topAnchor="25.0">
+                   <font>
+                       <Font size="16.0"/>
+                   </font>
+               </Text>
+               <Text layoutX="50.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     text="Height" AnchorPane.topAnchor="160.0"/>
+               <TextField fx:id="sourceHeiTextField" layoutX="50.0" layoutY="174.0"
+                          AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="177.0"/>
+               <ComboBox fx:id="sourceAirportCombo" layoutX="50.0" layoutY="44.0"
+                         onAction="#sourceSelected" prefHeight="26.0" prefWidth="171.0"
+                         AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="77.0"
+                         AnchorPane.topAnchor="44.0"/>
+           </AnchorPane>
+           <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                       GridPane.rowSpan="2">
+               <Text layoutX="44.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     text="Longitude" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="70.0"/>
+               <TextField fx:id="destLonTextField" layoutX="40.0" layoutY="86.0"
+                          AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="87.0"/>
+               <Text layoutX="40.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     text="Latitude" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="115.0"/>
+               <TextField fx:id="destLatTextField" layoutX="50.0" layoutY="132.0"
+                          AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="132.0"/>
+               <Text layoutX="50.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     text="Destination Airport" AnchorPane.leftAnchor="50.0"
+                     AnchorPane.rightAnchor="100.3359375" AnchorPane.topAnchor="25.0">
+                   <font>
+                       <Font size="16.0"/>
+                   </font>
+               </Text>
+               <Text layoutX="57.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     text="Height" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="160.0"/>
+               <TextField fx:id="destHeiTextField" layoutX="70.0" layoutY="182.0"
+                          AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="177.0"/>
+               <ComboBox fx:id="destAirportCombo" layoutX="93.0" layoutY="46.0"
+                         onAction="#destinationSelected" prefHeight="26.0" prefWidth="171.0"
+                         AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="77.0"
+                         AnchorPane.topAnchor="44.0"/>
+           </AnchorPane>
+           <AnchorPane prefHeight="105.0" prefWidth="600.0" GridPane.columnSpan="2"
+                       GridPane.rowIndex="2">
+               <Text fx:id="resultText" layoutX="6.0" layoutY="57.0" strokeType="OUTSIDE"
+                     strokeWidth="0.0" text="0.00" textAlignment="CENTER"
+                     wrappingWidth="587.9453125"/>
+               <Text layoutX="272.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     text="Distance:"/>
+           </AnchorPane>
+       </GridPane>
+   </center>
+   <bottom>
+       <AnchorPane prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+           <Button alignment="CENTER_RIGHT" layoutX="512.0" layoutY="-4.0" mnemonicParsing="false"
+                   onAction="#calculate" text="Calculate">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+           </Button>
+       </AnchorPane>
+   </bottom>
+</BorderPane>

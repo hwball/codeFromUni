@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="BoatConfig">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Boats">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Boat" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="GPSposition" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:attribute name="X" type="xs:double" use="required"/>
+                                                <xs:attribute name="Y" type="xs:double" use="required"/>
+                                                <xs:attribute name="Z" type="xs:double" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="Type" type="xs:string" use="required"/>
+                                    <xs:attribute name="BoatName" type="xs:string" use="required"/>
+                                    <xs:attribute name="SourceID" type="xs:int" use="required"/>
+                                    <xs:attribute name="HullNum" type="xs:string"/>
+                                    <xs:attribute name="ShortName" type="xs:string"/>
+                                    <xs:attribute name="ShapeID" type="xs:int"/>
+                                    <xs:attribute name="StoweName" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+

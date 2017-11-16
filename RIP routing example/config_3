@@ -1,0 +1,3 @@
+router-id 3
+input-ports 6113, 6114
+outputs 6115-4-4, 6112-3-2

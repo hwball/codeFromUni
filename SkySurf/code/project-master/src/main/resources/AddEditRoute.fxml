@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="seng202.group6.controller.AddEditRoute">
+    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0">
+        <GridPane hgap="10.0" vgap="5.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT"/>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES"
+                                   maxWidth="1.7976931348623157E308"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity"
+                                   minWidth="-Infinity"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <VBox.margin>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
+            </VBox.margin>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Airline"/>
+            <TextField fx:id="fieldAirline" maxHeight="-Infinity" maxWidth="-Infinity"
+                       minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0"
+                       GridPane.columnIndex="1"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Source:" GridPane.rowIndex="1"/>
+            <TextField fx:id="fieldSource" maxWidth="-Infinity" prefWidth="400.0"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Destination:"
+                  GridPane.rowIndex="2"/>
+            <TextField fx:id="fieldDestination" maxWidth="-Infinity" prefWidth="400.0"
+                       GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stops:" GridPane.rowIndex="3"/>
+            <TextField fx:id="fieldStops" maxWidth="-Infinity" prefWidth="400.0"
+                       GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Equipment:"
+                  GridPane.rowIndex="4"/>
+            <TextField fx:id="fieldEquipment" maxWidth="-Infinity" prefWidth="400.0"
+                       GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Code Share:"
+                  GridPane.rowIndex="5"/>
+            <CheckBox fx:id="checkCodeShare" mnemonicParsing="false" GridPane.columnIndex="1"
+                      GridPane.rowIndex="5"/>
+        </GridPane>
+        <ToolBar prefHeight="40.0" prefWidth="200.0">
+            <Button mnemonicParsing="false" onAction="#confirm" text="Confirm"/>
+            <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#close"
+                    text="Cancel"/>
+        </ToolBar>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+      xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="seng202.group6.controller.RawDataViewerController">
+    <TabPane fx:id="tabPaneRawData" maxHeight="1.7976931348623157E308"
+             maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE"
+             VBox.vgrow="ALWAYS">
+        <Tab fx:id="dataTabAirport" text="Airport Data View">
+            <StackPane>
+                <padding>
+                    <Insets left="5.0" right="5.0" top="5.0"/>
+                </padding>
+                <TableView fx:id="airportTable" maxHeight="1.7976931348623157E308"
+                           maxWidth="1.7976931348623157E308" prefHeight="100.0">
+                    <columns>
+                        <TableColumn fx:id="airportTableColName" prefWidth="99.0"
+                                     text="Name"/>
+                        <TableColumn fx:id="airportTableColCity" prefWidth="88.0"
+                                     text="City"/>
+                        <TableColumn fx:id="airportTableColCountry" prefWidth="90.0"
+                                     text="Country"/>
+                        <TableColumn fx:id="airportTableColIATA" prefWidth="70.0"
+                                     text="IATA/FAA"/>
+                        <TableColumn fx:id="airportTableColICAO" prefWidth="50.0"
+                                     text="ICAO"/>
+                        <TableColumn fx:id="airportTableColLat" prefWidth="82.0"
+                                     text="Latitude"/>
+                        <TableColumn fx:id="airportTableColLon" prefWidth="90.0"
+                                     text="Longitude"/>
+                        <TableColumn fx:id="airportTableColAlt" text="Altitude"/>
+                        <TableColumn fx:id="airportTableColTimeZ" prefWidth="93.0"
+                                     text="Time Zone"/>
+                        <TableColumn fx:id="airportTableColDst" minWidth="0.0"
+                                     prefWidth="43.0" text="DST"/>
+                        <TableColumn fx:id="airportTableColTimeZDataBase" prefWidth="92.0"
+                                     text="Time Zone DB"/>
+                        <TableColumn fx:id="airportTableColNumRoutes" prefWidth="73.0"
+                                     text="Num Routes"/>
+                    </columns>
+                </TableView>
+            </StackPane>
+        </Tab>
+        <Tab fx:id="dataTabAirline" text="Airline Data View">
+            <StackPane>
+                <padding>
+                    <Insets left="5.0" right="5.0" top="5.0"/>
+                </padding>
+                <TableView fx:id="airlineTable" maxHeight="1.7976931348623157E308"
+                           maxWidth="1.7976931348623157E308" prefHeight="100.0">
+                    <columns>
+                        <TableColumn fx:id="airlineTableColName"
+                                     prefWidth="177.66665649414062" text="Name"/>
+                        <TableColumn fx:id="airlineTableColAlias"
+                                     prefWidth="236.6666259765625" text="Alias"/>
+                        <TableColumn fx:id="airlineTableColIATA" prefWidth="83.3333740234375"
+                                     text="IATA"/>
+                        <TableColumn fx:id="airlineTableColICAO" prefWidth="91.0"
+                                     text="ICAO"/>
+                        <TableColumn fx:id="airlineTableColCall" prefWidth="122.0"
+                                     text="Call Sign"/>
+                        <TableColumn fx:id="airlineTableColCountry" prefWidth="113.0"
+                                     text="Country"/>
+                        <TableColumn fx:id="airlineTableColAct"
+                                     prefWidth="130.66668701171875" text="Active"/>
+                    </columns>
+                </TableView>
+            </StackPane>
+        </Tab>
+        <Tab fx:id="dataTabRoute" text="Route Data View">
+            <StackPane>
+                <padding>
+                    <Insets left="5.0" right="5.0" top="5.0"/>
+                </padding>
+                <TableView fx:id="routeTable" maxHeight="1.7976931348623157E308"
+                           maxWidth="1.7976931348623157E308" prefHeight="100.0">
+                    <columns>
+                        <TableColumn fx:id="routeTableColAirline"
+                                     prefWidth="175.00003051757812" text="Airline"/>
+                        <TableColumn fx:id="routeTableColSource"
+                                     prefWidth="167.99996948242188" text="Source Airport"/>
+                        <TableColumn fx:id="routeTableColDest" prefWidth="158.0"
+                                     text="Destination Airport"/>
+                        <TableColumn fx:id="routeTableColCode" minWidth="0.0"
+                                     prefWidth="150.66668701171875" text="Codeshare"/>
+                        <TableColumn fx:id="routeTableColStops"
+                                     prefWidth="143.66668701171875" text="Stops"/>
+                        <TableColumn fx:id="routeTableColEquip" minWidth="0.0"
+                                     prefWidth="159.99993896484375" text="Equipment"/>
+                    </columns>
+                </TableView>
+            </StackPane>
+        </Tab>
+        <Tab fx:id="dataTabFlight" text="Flight Data View">
+            <StackPane>
+                <padding>
+                    <Insets left="5.0" right="5.0" top="5.0"/>
+                </padding>
+                <TableView fx:id="flightTable" maxHeight="1.7976931348623157E308"
+                           maxWidth="1.7976931348623157E308" prefHeight="100.0">
+                    <columns>
+                        <TableColumn fx:id="flightTableColSource"
+                                     prefWidth="463.6666259765625" text="Source"/>
+                        <TableColumn fx:id="flightTableColDest" prefWidth="486.3333740234375"
+                                     text="Destination"/>
+                    </columns>
+                </TableView>
+            </StackPane>
+        </Tab>
+    </TabPane>
+    <ToolBar maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
+             nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0"
+             VBox.vgrow="NEVER">
+        <Button fx:id="buttonDeleteEntry" mnemonicParsing="false" onAction="#deleteEntry"
+                text="Delete Entry"/>
+        <Button fx:id="buttonEditEntry" mnemonicParsing="false" onAction="#editEntry"
+                text="Edit Entry"/>
+        <Button fx:id="buttonAddEntry" mnemonicParsing="false" onAction="#addEntry"
+                text="Add Entry"/>
+    </ToolBar>
+</VBox>

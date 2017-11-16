@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Race>
+    <RaceID>5326</RaceID>
+    <RaceType>FLEET</RaceType>
+    <CreationTimeDate>RACE_CREATION_TIME</CreationTimeDate>
+    <RaceStartTime Postpone="false" Time="RACE_START_TIME"/>
+    <Participants>
+
+    </Participants>
+    <CompoundMarkSequence>
+        <Corner SeqID="1" CompoundMarkID="1" Rounding="SP" ZoneSize="3" />
+        <Corner SeqID="2" CompoundMarkID="2" Rounding="Port" ZoneSize="3" />
+        <Corner SeqID="3" CompoundMarkID="3" Rounding="Port" ZoneSize="3" />
+        <Corner SeqID="4" CompoundMarkID="4" Rounding="Starboard" ZoneSize="3" />
+        <Corner SeqID="5" CompoundMarkID="3" Rounding="Starboard" ZoneSize="3" />
+        <Corner SeqID="6" CompoundMarkID="4" Rounding="Port" ZoneSize="3" />
+        <Corner SeqID="7" CompoundMarkID="5" Rounding="SP" ZoneSize="3"/>
+    </CompoundMarkSequence>
+    <Course>
+        <CompoundMark CompoundMarkID="1" Name="Start Line">
+            <Mark SeqId="1" Name="PRO" TargetLat="-40.681354" TargetLng="174.132354" SourceID="101"/>
+            <Mark SeqId="2" Name="PIN" TargetLat="-40.608415" TargetLng="174.272430" SourceID="102"/>
+        </CompoundMark>
+        <CompoundMark CompoundMarkID="2" Name="Marker 1">
+            <Mark Name="Marker1" TargetLat="-40.118713" TargetLng="173.541839" SourceID="103"/>
+        </CompoundMark>
+        <CompoundMark CompoundMarkID="3" Name="Marker 2">
+            <Mark Name="Marker2" TargetLat="-40.53120" TargetLng="173.250701" SourceID="104"/>
+        </CompoundMark>
+        <CompoundMark CompoundMarkID="4" Name="Gate">
+            <Mark Name="WGL" SeqId="1" TargetLat="-40.722999" TargetLng="173.420989" SourceID="106"/>
+            <Mark Name="WGR" SeqId="2" TargetLat="-40.789575" TargetLng="173.294647" SourceID="107"/>
+        </CompoundMark>
+        <CompoundMark CompoundMarkID="5" Name="Finish Line">
+            <Mark Name="FL" SeqId="1" TargetLat="-40.968169" TargetLng="173.692901" SourceID="108"/>
+            <Mark Name="FR" SeqId="2" TargetLat="-40.878932" TargetLng="173.695648" SourceID="109"/>
+        </CompoundMark>
+    </Course>
+    <CourseLimit>
+        <Limit Lat="-40.984758" Lon="173.736846" SeqID="1"/>
+        <Limit Lat="-41.160757" Lon="173.140838" SeqID="2"/>
+        <Limit Lat="-39.937843" Lon="173.085906" SeqID="3"/>
+        <Limit Lat="-40.244616" Lon="174.420745" SeqID="4"/>
+        <Limit Lat="-40.627178" Lon="174.412505" SeqID="5"/>
+        <Limit Lat="-40.783337" Lon="174.093902" SeqID="6"/>
+        <Limit Lat="-40.612585" Lon="173.893401" SeqID="7"/>
+        <Limit Lat="-40.752134" Lon="173.723113" SeqID="8"/>
+    </CourseLimit>
+</Race>

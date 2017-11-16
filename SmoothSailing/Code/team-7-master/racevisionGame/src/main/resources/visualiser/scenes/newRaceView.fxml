@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="racePane" prefHeight="431.0" prefWidth="610.0" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualiser.Controllers.RaceViewController">
+    <items>
+        <StackPane fx:id="newPane" prefHeight="150.0" prefWidth="200.0">
+            <children>
+                <AnchorPane fx:id="raceAnchorPane" focusTraversable="true">
+                    <children>
+                        <GridPane fx:id="canvasBase" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                        <Pane prefHeight="200.0" prefWidth="400.0" visible="false">
+                            <children>
+                                <Accordion>
+                                    <panes>
+                                        <TitledPane animated="false" prefHeight="395.0" prefWidth="222.0" text="Annotation Control">
+                                            <content>
+                                                <AnchorPane fx:id="annotationPane" minHeight="0.0" minWidth="0.0">
+                                                    <children>
+                                                        <CheckBox fx:id="showName" layoutY="39.0" mnemonicParsing="false" selected="true" text="Show Boat Name" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                        <CheckBox fx:id="showAbbrev" layoutY="61.0" mnemonicParsing="false" selected="true" text="Show Boat Abbreviation" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="25.0" />
+                                                        <CheckBox fx:id="showSpeed" layoutY="90.0" mnemonicParsing="false" selected="true" text="Show Boat Speed" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                                                        <CheckBox fx:id="showBoatPath" mnemonicParsing="false" selected="true" text="Show Boat Paths" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="75.0" />
+                                                        <CheckBox fx:id="showTime" mnemonicParsing="false" selected="true" text="Show Boat Leg Time" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="100.0" />
+                                                        <CheckBox fx:id="showEstTime" mnemonicParsing="false" selected="true" text="Show Est. Time to Next Mark" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="125.0" />
+                                                        <CheckBox fx:id="showGuideline" mnemonicParsing="false" text="Show Guideline" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="150.0" />
+                                                        <Separator layoutX="19.6" layoutY="175.6" prefHeight="0.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="175.0" />
+                                                        <Label text="Annotations" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="175.0" />
+                                                        <RadioButton fx:id="hideAnnoRBtn" mnemonicParsing="false" text="Hidden" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="200.0">
+                                                            <toggleGroup>
+                                                                <ToggleGroup fx:id="annoToggleGroup" />
+                                                            </toggleGroup>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="showAnnoRBtn" mnemonicParsing="false" text="Visible" toggleGroup="$annoToggleGroup" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="225.0" />
+                                                        <RadioButton fx:id="partialAnnoRBtn" mnemonicParsing="false" text="Partial" toggleGroup="$annoToggleGroup" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="250.0" />
+                                                        <RadioButton fx:id="importantAnnoRBtn" mnemonicParsing="false" text="Important" toggleGroup="$annoToggleGroup" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="275.0" />
+                                                        <Button fx:id="saveAnno" layoutX="11.0" layoutY="126.0" mnemonicParsing="false" text="Save Important Annotations" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="300.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane animated="false" text="FPS Control">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <CheckBox fx:id="showFPS" layoutX="-14.0" layoutY="13.0" mnemonicParsing="false" selected="true" text="Show FPS" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                    </panes>
+                                </Accordion>
+                            </children>
+                        </Pane>
+                  <ImageView fitHeight="250.0" fitWidth="272.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="1.0">
+                     <image>
+                        <Image url="@../../images/raceViewUI_LowerRight.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="250.0" fitWidth="272.0" layoutX="10.0" layoutY="10.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                     <image>
+                        <Image url="@../../images/raceViewUI_LowerLeft.png" />
+                     </image>
+                  </ImageView>
+                        <Label fx:id="FPS" mouseTransparent="true" text="FPS: 0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                  <GridPane fx:id="playerHealthContainer" prefHeight="75.0" prefWidth="75.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+                        <Label fx:id="tutorialText" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: orange; -fx-border-radius: 5px; -fx-background-color: #ffffcc; -fx-text-fill: #3399ff; -fx-border-width: 3; -fx-border-insets: -3;" text="This is the tutorial text" visible="false" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="150.0" />
+                  <StackPane fx:id="speedPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="2.0">
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding></StackPane>
+                  <AnchorPane maxHeight="145.0" maxWidth="145.0" minHeight="145.0" minWidth="145.0" mouseTransparent="true" prefHeight="145.0" prefWidth="145.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0">
+                     <children>
+                        <AnchorPane maxHeight="145.0" maxWidth="145.0" minHeight="145.0" minWidth="145.0" prefHeight="145.0" prefWidth="145.0">
+                           <children>
+                                <GridPane fx:id="canvasBase1" maxHeight="145.0" maxWidth="145.0" minHeight="145.0" minWidth="145.0" prefHeight="145.0" prefWidth="145.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                </GridPane>
+                                  <Pane maxHeight="200.0" maxWidth="200.0" prefHeight="200.0" prefWidth="216.0" visible="false">
+                                      <children>
+                                          <Accordion>
+                                              <panes>
+                                                  <TitledPane animated="false" prefHeight="395.0" prefWidth="222.0" text="Annotation Control">
+                                                      <content>
+                                                          <AnchorPane fx:id="annotationPane1" minHeight="0.0" minWidth="0.0">
+                                                              <children>
+                                                                  <CheckBox fx:id="showName1" layoutY="39.0" mnemonicParsing="false" selected="true" text="Show Boat Name" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                                  <CheckBox fx:id="showAbbrev1" layoutY="61.0" mnemonicParsing="false" selected="true" text="Show Boat Abbreviation" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="25.0" />
+                                                                  <CheckBox fx:id="showSpeed1" layoutY="90.0" mnemonicParsing="false" selected="true" text="Show Boat Speed" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                                                                  <CheckBox fx:id="showBoatPath1" mnemonicParsing="false" selected="true" text="Show Boat Paths" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="75.0" />
+                                                                  <CheckBox fx:id="showTime1" mnemonicParsing="false" selected="true" text="Show Boat Leg Time" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="100.0" />
+                                                                  <CheckBox fx:id="showEstTime1" mnemonicParsing="false" selected="true" text="Show Est. Time to Next Mark" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="125.0" />
+                                                                  <CheckBox fx:id="showGuideline1" mnemonicParsing="false" text="Show Guideline" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="150.0" />
+                                                                  <Separator layoutX="19.6" layoutY="175.6" prefHeight="0.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="175.0" />
+                                                                  <Label text="Annotations" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="175.0" />
+                                                                  <RadioButton fx:id="hideAnnoRBtn1" mnemonicParsing="false" text="Hidden" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="200.0">
+                                                                      <toggleGroup>
+                                                                          <ToggleGroup fx:id="annoToggleGroup1" />
+                                                                      </toggleGroup>
+                                                      </RadioButton>
+                                                                  <RadioButton fx:id="showAnnoRBtn1" mnemonicParsing="false" text="Visible" toggleGroup="$annoToggleGroup1" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="225.0" />
+                                                                  <RadioButton fx:id="partialAnnoRBtn1" mnemonicParsing="false" text="Partial" toggleGroup="$annoToggleGroup1" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="250.0" />
+                                                                  <RadioButton fx:id="importantAnnoRBtn1" mnemonicParsing="false" text="Important" toggleGroup="$annoToggleGroup1" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="275.0" />
+                                                                  <Button fx:id="saveAnno1" layoutX="11.0" layoutY="126.0" mnemonicParsing="false" text="Save Important Annotations" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="300.0" />
+                                                              </children>
+                                                          </AnchorPane>
+                                                      </content>
+                                                  </TitledPane>
+                                                  <TitledPane animated="false" text="FPS Control">
+                                                      <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                              <children>
+                                                                  <CheckBox fx:id="showFPS1" layoutX="-14.0" layoutY="13.0" mnemonicParsing="false" selected="true" text="Show FPS" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                              </children>
+                                                          </AnchorPane>
+                                                      </content>
+                                                  </TitledPane>
+                                              </panes>
+                                          </Accordion>
+                                      </children>
+                                  </Pane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <StackPane fx:id="deathPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane mouseTransparent="true" opacity="0.31" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: grey;" />
+                        <Label alignment="CENTER" text="You have died..." StackPane.alignment="TOP_CENTER">
+                           <font>
+                              <Font size="34.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets top="100.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label alignment="CENTER" text="But you can still watch the race!" StackPane.alignment="TOP_CENTER">
+                           <StackPane.margin>
+                              <Insets top="165.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deathOKPressed" prefHeight="25.0" prefWidth="52.0" text="OK" StackPane.alignment="TOP_CENTER">
+                           <StackPane.margin>
+                              <Insets top="200.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  <ImageView fx:id="tom" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0">
+                     <image>
+                        <Image url="@../../images/sailertom.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </AnchorPane>
+            <ImageView fitHeight="150.0" fitWidth="200.0" focusTraversable="true" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_CENTER">
+               <image>
+                  <Image url="@../../images/raceViewUI_LowerMiddle.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="115.0" fitWidth="255.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+               <image>
+                  <Image url="@../../images/raceViewUI_UpperMiddle.png" />
+               </image>
+            </ImageView>
+            <StackPane fx:id="arrowPane" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" prefHeight="60.0" prefWidth="60.0" StackPane.alignment="BOTTOM_CENTER">
+               <StackPane.margin>
+                  <Insets bottom="25.0" left="2.0" />
+               </StackPane.margin>
+            </StackPane>
+            <StackPane fx:id="nextMarkPane" alignment="TOP_CENTER" mouseTransparent="true" prefHeight="150.0" prefWidth="150.0" snapToPixel="false">
+                <children>
+                    <fx:include fx:id="nextMark" source="nextMark.fxml" />
+                </children>
+               <StackPane.margin>
+                  <Insets top="4.0" />
+               </StackPane.margin>
+            </StackPane>
+                  <Label fx:id="timer" alignment="CENTER" maxHeight="20.0" mouseTransparent="true" text="0:0" StackPane.alignment="TOP_CENTER">
+                      <font>
+                          <Font size="9.0" />
+                      </font>
+               <padding>
+                  <Insets top="101.0" />
+               </padding>
+                  </Label>
+            <AnchorPane maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" mouseTransparent="true" prefHeight="600.0" prefWidth="600.0" StackPane.alignment="CENTER">
+               <children>
+                  <GridPane fx:id="canvasBase2" maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+              <AnchorPane fx:id="infoWrapper" focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="200.0" visible="false">
+                  <children>
+                  <GridPane layoutX="-2.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="475.0" minWidth="475.0" prefWidth="475.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="330.0" minHeight="10.0" prefHeight="214.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="135.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                            <TableView fx:id="boatInfoTable" minWidth="475.0" prefHeight="214.0" prefWidth="475.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                <columns>
+                                    <TableColumn fx:id="boatTeamColumn" prefWidth="135.0" text="Team" />
+                                    <TableColumn fx:id="boatMarkColumn" prefWidth="142.0" text="Mark" />
+                              <TableColumn fx:id="boatHealthColumn" prefWidth="110.0" text="Health" />
+                                    <TableColumn fx:id="boatSpeedColumn" prefWidth="87.0" text="Speed" />
+                                </columns>
+                            </TableView>
+                            <AnchorPane fx:id="lineChartWrapper" prefHeight="167.0" prefWidth="178.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                <children>
+                                    <LineChart fx:id="sparklineChart" layoutX="-211.0" layoutY="-186.0" mouseTransparent="true" prefHeight="167.0" prefWidth="178.0" titleSide="LEFT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                        <xAxis>
+                                            <NumberAxis side="BOTTOM" fx:id="xAxis" />
+                                        </xAxis>
+                                        <yAxis>
+                                            <NumberAxis fx:id="yAxis" side="LEFT" />
+                                        </yAxis>
+                                    </LineChart>
+                                </children>
+                            </AnchorPane>
+                     </children>
+                  </GridPane>
+                  </children>
+              </AnchorPane>
+            </children>
+        </StackPane>
+    </items>
+</SplitPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RegattaConfig">
+    <xs:complexType>
+    <xs:sequence>
+      <xs:element type="xs:int" name="RegattaID" minOccurs="1"/>
+      <xs:element type="xs:string" name="RegattaName" minOccurs="1"/>
+      <xs:element type="xs:string" name="CourseName" minOccurs="1"/>
+      <xs:element name="CentralLatitude" type="xs:double" minOccurs="1"/>
+      <xs:element name="CentralLongitude" type="xs:double" minOccurs="1"/>
+      <xs:element name="CentralAltitude" type="xs:double" minOccurs="1"/>
+      <xs:element type="xs:double" name="UtcOffset" minOccurs="1"/>
+      <xs:element name="MagneticVariation" type="xs:double" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RegattaConfig>
+    <RegattaID>1</RegattaID>
+    <RegattaName>Seng302 Mock Test</RegattaName>
+    <CourseName>Bermuda AC35</CourseName>
+    <CentralLatitude>-32.296577</CentralLatitude>
+    <CentralLongitude>64.854304</CentralLongitude>
+    <CentralAltitude>0.00</CentralAltitude>
+    <UtcOffset>-4</UtcOffset>
+    <MagneticVariation>-14.78</MagneticVariation>
+</RegattaConfig>

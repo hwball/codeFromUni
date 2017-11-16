@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="startWrapper" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualiser.Controllers.RaceStartController">
+    <children>
+        <GridPane fx:id="start" prefHeight="600.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="200.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="372.0" minWidth="10.0" prefWidth="200.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="394.0" minWidth="10.0" prefWidth="250.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="416.0" minWidth="10.0" prefWidth="200.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="200.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="241.0" minHeight="10.0" prefHeight="116.5" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="383.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="369.0" minHeight="10.0" prefHeight="261.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="369.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="191.5" minHeight="10.0" prefHeight="53.5" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="191.5" minHeight="10.0" prefHeight="82.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TableView fx:id="boatNameTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2">
+                    <placeholder>
+                        <Label text="Initial lineup..." />
+                    </placeholder>
+                    <columns>
+                        <TableColumn fx:id="boatNameColumn" prefWidth="360.0" style="-fx-font-size: 16;" text="Team Name" />
+                        <TableColumn fx:id="boatCodeColumn" prefWidth="133.0" style="-fx-font-size: 16;" text="Code" />
+                    </columns>
+                </TableView>
+                <Label fx:id="timeZoneTime" contentDisplay="CENTER" text="Local time..." GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <Label fx:id="timer" text=" " GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                <Label fx:id="raceStartLabel" text="Starting time..." GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Label fx:id="raceTitleLabel" text="Welcome to RaceVision" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Label fx:id="raceStatusLabel" alignment="CENTER" text="Race Status:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

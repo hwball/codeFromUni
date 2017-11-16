@@ -1,0 +1,10 @@
+<RegattaConfig>
+    <RegattaID>0</RegattaID>
+    <RegattaName>Race Tutorial</RegattaName>
+    <CourseName>Tutorial</CourseName>
+    <CentralLatitude>-36.82791529</CentralLatitude>
+    <CentralLongitude>174.81218919</CentralLongitude>
+    <CentralAltitude>0.00</CentralAltitude>
+    <UtcOffset>12</UtcOffset>
+    <MagneticVariation>14.1</MagneticVariation>
+</RegattaConfig>

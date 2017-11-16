@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Map Demo</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 100%;
+        }
+        #floating-panel {
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            z-index: 5;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #999;
+            text-align: left;
+            font-family: 'Roboto','sans-serif';b
+            line-height: 20px;
+            padding-left: 10px;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+<div id="floating-panel">
+    Show Airports
+    <input id="airportsCheckbox" type="checkbox" onclick="hideAirports()" checked="checked"></br>
+    Show Routes
+    <input id="routesCheckbox" type="checkbox" onclick="hideRoutes()" checked="checked"></br>
+    Show Flights
+    <input id="flightsCheckbox" type="checkbox" onclick="hideFlights()" checked="cecked"></br>
+</div>
+<div id="map"></div>
+<script>
+var map;
+var markers = [];
+var lines = [];
+var flightList = [];
+var airportsHidden;
+var routesHidden;
+var flightsHidden;
+function initMap() {
+  haightAshbury = {lat: 37.769, lng: -122.446};
+  airportsHidden = 0;
+  routesHidden = 0;
+  flightsHidden = 0;
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 2,
+    center: new google.maps.LatLng(3.180967,101.715546),
+    mapTypeId: 'terrain'
+  });
+}
+
+
+// Adds a list of airports and appends to airport list
+function showAirports(airports) {
+    for (i = 0; i < airports.length; i++) {
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(airports[i][1], airports[i][2]),
+        map: null,
+        title: airports[i][0],
+//        icon: {
+//          path: google.maps.SymbolPath.CIRCLE,
+//          scale: 10
+//        }
+//        icon: "airport32.png"
+      });
+      markers.push(marker);
+    }
+    if(airportsHidden == 0){
+      setAirportMap(map);
+    }
+}
+
+//Adds a list of routes and appends to route list
+function showRoutes(routes) {
+    for (j = 0; j < routes.length; j++) {
+      var route = new google.maps.Polyline({
+        map: null,
+        path: [new google.maps.LatLng(routes[j][1],routes[j][2]), new google.maps.LatLng(routes[j][3],routes[j][4])],
+        geodesic: true,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
+      });
+      lines.push(route);
+    }
+    if(routesHidden == 0){
+      setRouteMap(map);
+    }
+}
+
+//Adds a list of flights and appends to flight list
+function showFlights(flights) {
+    for (k = 0; k < flights.length; k++) {
+      var route = new google.maps.Polyline({
+        map: null,
+        path: flights[k],
+        geodesic: true,
+        strokeColor: '#FFA000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
+      });
+
+      flightList.push(route);
+    }
+    if(flightsHidden == 0){
+      setFlightMap(map);
+    }
+}
+
+//sets all airports to a map
+function setAirportMap(map) {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(map);
+  }
+}
+
+//toggles airports
+function hideAirports() {
+  if (airportsHidden == 0){
+    setAirportMap(null);
+    console.log("airports hidden");
+    airportsHidden = 1;
+  }
+  else{
+    setAirportMap(map);
+    console.log("airports unhidden");
+    airportsHidden = 0;
+  }
+}
+
+
+//deletes all airports
+function deleteAirports() {
+  setAirportMap(null);
+  markers = [];
+}
+
+
+//sets all routes to a map
+function setRouteMap(map) {
+  for (var i = 0; i < lines.length; i++) {
+    lines[i].setMap(map);
+  }
+}
+
+//toggles all routes
+function hideRoutes() {
+  if (routesHidden == 0){
+    setRouteMap(null);
+    console.log("routes hidden");
+    routesHidden = 1;
+  }
+  else{
+    setRouteMap(map);
+    console.log("routes unhidden");
+    routesHidden = 0;
+  }
+}
+
+//deletes all routes
+function deleteRoutes() {
+  setRouteMap(null);
+  lines = [];
+}
+
+//sets all flights to a map
+function setFlightMap(map) {
+  for (var i = 0; i < flightList.length; i++) {
+    flightList[i].setMap(map);
+  }
+}
+
+//toggles flights
+function hideFlights() {
+  if (flightsHidden == 0){
+    setFlightMap(null);
+    console.log("flights hidden");
+    flightsHidden = 1;
+  }
+  else{
+    setFlightMap(map);
+    console.log("flights unhidden");
+    flightsHidden = 0;
+  }
+}
+
+//deletes all flights
+function deleteFlights() {
+  setFlightMap(null);
+  flightList = [];
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEPZMfQYbi9GPoO_Jy6Q1W9aocnTQiUYc&callback=initMap">
+</script>
+</body>
+</html>

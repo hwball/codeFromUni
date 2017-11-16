@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="seng202.group6.controller.ImporterController">
+    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0">
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES"/>
+                <ColumnConstraints hgrow="SOMETIMES"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+            <padding>
+                <Insets bottom="10.0" top="10.0"/>
+            </padding>
+            <VBox spacing="5.0">
+                <GridPane.margin>
+                    <Insets left="10.0"/>
+                </GridPane.margin>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select Data Type:"
+                      wrappingWidth="210.0">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Text>
+                <GridPane hgap="5.0" vgap="5.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                           prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <RadioButton fx:id="radioAirline" mnemonicParsing="false"
+                                 text="Airline">
+                        <padding>
+                            <Insets left="10.0"/>
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="toggleGroupDataType"/>
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton fx:id="radioAirport" mnemonicParsing="false"
+                                 text="Airport" toggleGroup="$toggleGroupDataType"
+                                 GridPane.columnIndex="1">
+                        <padding>
+                            <Insets left="10.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton fx:id="radioFlight" mnemonicParsing="false" text="Flight"
+                                 toggleGroup="$toggleGroupDataType" GridPane.rowIndex="1">
+                        <padding>
+                            <Insets left="10.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton fx:id="radioRoute" mnemonicParsing="false" text="Route"
+                                 toggleGroup="$toggleGroupDataType"
+                                 GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <padding>
+                            <Insets left="10.0"/>
+                        </padding>
+                    </RadioButton>
+                </GridPane>
+            </VBox>
+            <VBox spacing="5.0" GridPane.columnIndex="1">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select List to Append to"
+                      wrappingWidth="210.0">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Text>
+                <ComboBox fx:id="listComboBox" prefHeight="25.0" prefWidth="210.0"/>
+            </VBox>
+        </GridPane>
+        <HBox alignment="CENTER_LEFT" spacing="10.0" VBox.vgrow="NEVER">
+            <VBox.margin>
+                <Insets left="10.0" right="20.0"/>
+            </VBox.margin>
+            <padding>
+                <Insets bottom="5.0" top="5.0"/>
+            </padding>
+            <Button fx:id="selectButton" mnemonicParsing="false" onAction="#selectFile"
+                    text="Select File"/>
+            <Text fx:id="pathText" strokeType="OUTSIDE" strokeWidth="0.0" text="Path to File"
+                  wrappingWidth="415.7294921875"/>
+        </HBox>
+        <ScrollPane prefHeight="200.0" prefWidth="570.0" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0"/>
+            </VBox.margin>
+            <Label fx:id="mainTextDisplay" alignment="TOP_LEFT"
+                   maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                   wrapText="true">
+                <padding>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </padding>
+            </Label>
+        </ScrollPane>
+        <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+            <Button mnemonicParsing="false" onAction="#importData" text="Import"/>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#closeImporter"
+                    text="Cancel"/>
+        </ToolBar>
+    </VBox>
+</AnchorPane>

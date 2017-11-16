@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seng202.group6.controller.FlightDetailsController">
+   <center>
+      <TableView fx:id="flightPointTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="typeCol" prefWidth="94.0" text="Type" />
+          <TableColumn fx:id="idCol" prefWidth="109.0" text="ID" />
+            <TableColumn fx:id="altCol" prefWidth="146.0" text="Altitude" />
+            <TableColumn fx:id="latCol" prefWidth="131.0" text="Latitude" />
+            <TableColumn fx:id="lonCol" prefWidth="119.0" text="Longitude" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+       <AnchorPane prefHeight="3.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <BorderPane.margin>
+               <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+           </BorderPane.margin>
+           <Button fx:id="closeButton" layoutX="532.0" layoutY="7.0" mnemonicParsing="false"
+                   onAction="#close" prefHeight="33.0" prefWidth="65.0" text="Close"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+                   BorderPane.alignment="BOTTOM_RIGHT">
+              <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+              </padding>
+           </Button>
+       </AnchorPane>
+   </bottom>
+</BorderPane>
